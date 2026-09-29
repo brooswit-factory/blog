@@ -1,6 +1,6 @@
 # blog
 
-Blog for Brooswit Factory, served at https://blog.brooswit.nexus by GitHub Pages from `main`. Currently a "Coming soon" placeholder. No build step: edit `index.html`.
+Blog for Brooswit Factory, served at https://blog.brooswit.nexus by GitHub Pages from `main`. Currently an "Under construction" placeholder. No build step: edit `index.html`.
 
 ## Changes
 
