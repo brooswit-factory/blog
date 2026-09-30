@@ -10,10 +10,13 @@
 <style>
   @font-face { font-family:"Cinzel Decorative"; font-weight:700; font-display:swap; src:url(fonts/cinzel-decorative-latin-700-normal.woff2) format("woff2"); }
   @font-face { font-family:"IM Fell English"; font-weight:400; font-display:swap; src:url(fonts/im-fell-english-latin-400-normal.woff2) format("woff2"); }
-  :root { color-scheme: dark; --bg:#0d0b09; --fg:#eadfc4; --gold:#d9a441; --link:#f0c56a; }
+  :root { color-scheme: dark; --bg:#0d0b09; --fg:#eadfc4; --gold:#d9a441; --link:#f0c56a; --panel:#16110d; }
   body { margin:0; background:var(--bg); color:var(--fg); font:400 1.4rem/1.7 "IM Fell English",Georgia,serif; text-align:center; }
   img { display:block; width:100%; height:auto; }
-  main { max-width:64rem; margin:0 auto; padding:clamp(24px,5vw,64px) 24px; }
+  main { --edge:clamp(14px,3.4vw,30px); position:relative; background:var(--panel); padding:clamp(24px,5vw,64px) max(calc(var(--edge) + 24px), calc((100% - 64rem) / 2)); }
+  main::before, main::after { content:""; position:absolute; top:0; bottom:0; width:var(--edge); background:url(assets/border.png) 0 0/var(--edge) auto repeat-y; pointer-events:none; }
+  main::before { left:0; }
+  main::after { right:0; transform:scaleX(-1); }
   h1, h2 { margin:0 0 .4em; font:700 clamp(1.7rem,6vw,4rem)/1.2 "Cinzel Decorative",Georgia,serif; color:var(--gold); letter-spacing:.03em; text-wrap:balance; overflow-wrap:break-word; }
   h2 { font-size:clamp(1.3rem,3.5vw,2.2rem); margin-bottom:.8em; }
   p { font-size:clamp(1.25rem,2.6vw,1.6rem); }

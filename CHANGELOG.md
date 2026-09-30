@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+### Changed
+
+- FACTORY-553: the "Under construction" / "Pardon our mess." area now has the same look as the factory homepage's info area: a full-width dark panel (`#16110d`) with the stone border down both edges, flush with the page edge. `assets/border.png` is the exact file from the website repo (30x1402, cropped to the art, palette PNG with full alpha, ~25 KB), tiled `repeat-y`; the left strip is used as is and the right one is mirrored (`scaleX(-1)`). Edge width `clamp(14px,3.4vw,30px)`. The banner, fonts and copy are unchanged.
+
 ## 0.1.2
 
 ### Changed
